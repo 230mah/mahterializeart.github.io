@@ -4,9 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MÁhterialize ART — Loja</title>
-
-  <!-- Link CSS atualizado -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=1" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=3" />
 </head>
 
 <body>
@@ -16,7 +14,6 @@
       <div class="logo">
         <img src="assets/img/logo/logo.jpg" alt="Máhterialize ART" />
       </div>
-
       <nav class="nav">
         <a href="#produtos">Produtos</a>
         <a href="#sobre">Sobre</a>
@@ -34,7 +31,6 @@
           <p class="lead">Estátuas e bustos colecionáveis — peças autorais e importadas.</p>
           <a class="cta" href="#produtos">Ver produtos</a>
         </div>
-
         <div class="hero-image">
           <img src="assets/img/okarun/estatua-okarun1.jpg" alt="Okarun destaque" />
         </div>
@@ -47,15 +43,7 @@
 
       <!-- Produto: Okarun -->
       <article class="produto">
-        <div class="produto-gallery">
-          <img class="main-img" src="assets/img/okarun/estatua-okarun1.jpg" alt="Okarun 1">
-          <div class="thumbs">
-            <img class="thumb active" src="assets/img/okarun/estatua-okarun1.jpg" alt="Okarun 1">
-            <img class="thumb" src="assets/img/okarun/estatua-okarun2.jpg" alt="Okarun 2">
-            <img class="thumb" src="assets/img/okarun/estatua-okarun3.jpg" alt="Okarun 3">
-          </div>
-        </div>
-
+        <img class="small-img" src="assets/img/okarun/estatua-okarun1.jpg" alt="Okarun 1" />
         <div class="produto-info">
           <h3>Estátua Anime Okarun — Dandadan</h3>
           <p class="desc">Tamanho: 28 × 19 cm</p>
@@ -66,13 +54,7 @@
 
       <!-- Produto: Slug Girl -->
       <article class="produto">
-        <div class="produto-gallery">
-          <img class="main-img" src="assets/img/sluggirl/estatua-sluggirl1.jpg" alt="Slug Girl 1">
-          <div class="thumbs">
-            <img class="thumb active" src="assets/img/sluggirl/estatua-sluggirl1.jpg" alt="Slug Girl 1">
-          </div>
-        </div>
-
+        <img class="small-img" src="assets/img/sluggirl/estatua-sluggirl1.jpg" alt="Slug Girl" />
         <div class="produto-info">
           <h3>Estátua Slug Girl — Junji Ito</h3>
           <p class="desc">Tamanho: 10 × 4 cm</p>
@@ -83,15 +65,7 @@
 
       <!-- Produto: Azami -->
       <article class="produto">
-        <div class="produto-gallery">
-          <img class="main-img" src="assets/img/azamikurotani/estatuaazamikurotani1.jpg" alt="Azami 1">
-          <div class="thumbs">
-            <img class="thumb active" src="assets/img/azamikurotani/estatuaazamikurotani1.jpg" alt="Azami 1">
-            <img class="thumb" src="assets/img/azamikurotani/estatua-azamikurotani2.jpg" alt="Azami 2">
-            <img class="thumb" src="assets/img/azamikurotani/estatua-azamikurotani3.jpg" alt="Azami 3">
-          </div>
-        </div>
-
+        <img class="small-img" src="assets/img/azamikurotani/estatuaazamikurotani1.jpg" alt="Azami" />
         <div class="produto-info">
           <h3>Busto Azami Kurotani — Uzumaki</h3>
           <p class="desc">Tamanho: 8 × 7 cm</p>
@@ -102,13 +76,7 @@
 
       <!-- Produto: Tomie -->
       <article class="produto">
-        <div class="produto-gallery">
-          <img class="main-img" src="assets/img/tomie/estatua-tomie1.jpg" alt="Tomie">
-          <div class="thumbs">
-            <img class="thumb active" src="assets/img/tomie/estatua-tomie1.jpg" alt="Tomie">
-          </div>
-        </div>
-
+        <img class="small-img" src="assets/img/tomie/estatua-tomie1.jpg" alt="Tomie" />
         <div class="produto-info">
           <h3>Busto Tomie — Junji Ito</h3>
           <p class="desc">Tamanho: 13 × 6 cm</p>
@@ -128,43 +96,39 @@
     <section id="contato" class="container contato">
       <h2>Contato</h2>
       <p>Para dúvidas, encomendas e orçamentos:</p>
-
-      <p>
-        📧 <strong>E-mail:</strong>
-        <a href="mailto:mahterializeart@gmail.com">mahterializeart@gmail.com</a>
-      </p>
-
-      <p>
-        📸 <strong>Instagram:</strong>
-        <a href="https://instagram.com/mahterialize_art" target="_blank">
-          @mahterialize_art
-        </a>
-      </p>
+      <p>📧 <strong>E-mail:</strong> <a href="mailto:mahterializeart@gmail.com">mahterializeart@gmail.com</a></p>
+      <p>📸 <strong>Instagram:</strong> <a href="https://instagram.com/mahterialize_art" target="_blank">@mahterialize_art</a></p>
     </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container">
-      © 2025 — Máhterialize ART
-    </div>
+    <div class="container">© 2025 — Máhterialize ART</div>
   </footer>
 
-  <!-- SCRIPT GALERIA -->
-  <script>
-    document.querySelectorAll('.produto').forEach(produto => {
-      const mainImg = produto.querySelector('.main-img');
-      const thumbs = produto.querySelectorAll('.thumb');
+  <!-- MODAL -->
+  <div id="modal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modal-img">
+  </div>
 
-      thumbs.forEach(thumb => {
-        thumb.addEventListener('click', () => {
-          mainImg.src = thumb.src;
-          thumbs.forEach(t => t.classList.remove('active'));
-          thumb.classList.add('active');
-        });
+  <!-- SCRIPT -->
+  <script>
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".small-img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "block";
+        modalImg.src = img.src;
       });
     });
+
+    closeBtn.onclick = () => modal.style.display = "none";
+    window.onclick = e => { if(e.target === modal) modal.style.display = "none"; }
   </script>
 </body>
 </html>
+
 

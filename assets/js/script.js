@@ -1,16 +1,15 @@
 <script>
-  document.querySelectorAll('.produto').forEach(produto => {
-    const mainImg = produto.querySelector('.main-img');
-    const thumbs = produto.querySelectorAll('.thumb');
+  const modal = document.getElementById("modal");
+  const modalImg = document.getElementById("modal-img");
+  const closeBtn = document.querySelector(".close");
 
-    thumbs.forEach(thumb => {
-      thumb.addEventListener('click', () => {
-        mainImg.src = thumb.src;
-
-        // Remove active de todas
-        thumbs.forEach(t => t.classList.remove('active'));
-        thumb.classList.add('active');
-      });
+  document.querySelectorAll(".produto-gallery img.thumb").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
     });
   });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = e => { if(e.target === modal) modal.style.display = "none"; }
 </script>

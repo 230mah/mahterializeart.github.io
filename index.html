@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MÁhterialize ART — Loja</title>
-  <link rel="stylesheet" href="assets/css/styles.css?v=5" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=6" />
 </head>
 
 <body>
@@ -126,19 +126,19 @@
     <div class="container">© 2025 — Máhterialize ART</div>
   </footer>
 
-  <!-- MODAL -->
+  <!-- MODAL LIGHTBOX -->
   <div id="modal" class="modal">
     <span class="close">&times;</span>
     <img class="modal-content" id="modal-img">
   </div>
 
-  <!-- SCRIPT -->
+  <!-- JS LIGHTBOX -->
   <script>
     const modal = document.getElementById("modal");
     const modalImg = document.getElementById("modal-img");
     const closeBtn = document.querySelector(".close");
 
-    document.querySelectorAll(".thumb").forEach(img => {
+    document.querySelectorAll(".produto-gallery img.thumb").forEach(img => {
       img.addEventListener("click", () => {
         modal.style.display = "block";
         modalImg.src = img.src;

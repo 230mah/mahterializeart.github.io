@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>MÁhterialize ART — Loja</title>
 
-  <!-- Link CSS atualizado com ?v=1 para evitar cache -->
+  <!-- Link CSS atualizado -->
   <link rel="stylesheet" href="assets/css/styles.css?v=1" />
 </head>
 
@@ -29,7 +29,6 @@
   <main>
     <section class="hero">
       <div class="container hero-inner">
-
         <div class="hero-text">
           <h1>MÁhterialize ART</h1>
           <p class="lead">Estátuas e bustos colecionáveis — peças autorais e importadas.</p>
@@ -39,7 +38,6 @@
         <div class="hero-image">
           <img src="assets/img/okarun/estatua-okarun1.jpg" alt="Okarun destaque" />
         </div>
-
       </div>
     </section>
 
@@ -50,9 +48,12 @@
       <!-- Produto: Okarun -->
       <article class="produto">
         <div class="produto-gallery">
-          <img class="thumb" src="assets/img/okarun/estatua-okarun1.jpg" alt="Okarun 1">
-          <img class="thumb" src="assets/img/okarun/estatua-okarun2.jpg" alt="Okarun 2">
-          <img class="thumb" src="assets/img/okarun/estatua-okarun3.jpg" alt="Okarun 3">
+          <img class="main-img" src="assets/img/okarun/estatua-okarun1.jpg" alt="Okarun 1">
+          <div class="thumbs">
+            <img class="thumb active" src="assets/img/okarun/estatua-okarun1.jpg" alt="Okarun 1">
+            <img class="thumb" src="assets/img/okarun/estatua-okarun2.jpg" alt="Okarun 2">
+            <img class="thumb" src="assets/img/okarun/estatua-okarun3.jpg" alt="Okarun 3">
+          </div>
         </div>
 
         <div class="produto-info">
@@ -66,7 +67,10 @@
       <!-- Produto: Slug Girl -->
       <article class="produto">
         <div class="produto-gallery">
-          <img class="thumb" src="assets/img/sluggirl/estatua-sluggirl1.jpg" alt="Slug Girl 1">
+          <img class="main-img" src="assets/img/sluggirl/estatua-sluggirl1.jpg" alt="Slug Girl 1">
+          <div class="thumbs">
+            <img class="thumb active" src="assets/img/sluggirl/estatua-sluggirl1.jpg" alt="Slug Girl 1">
+          </div>
         </div>
 
         <div class="produto-info">
@@ -80,9 +84,12 @@
       <!-- Produto: Azami -->
       <article class="produto">
         <div class="produto-gallery">
-          <img class="thumb" src="assets/img/azamikurotani/estatuaazamikurotani1.jpg" alt="Azami 1">
-          <img class="thumb" src="assets/img/azamikurotani/estatua-azamikurotani2.jpg" alt="Azami 2">
-          <img class="thumb" src="assets/img/azamikurotani/estatua-azamikurotani3.jpg" alt="Azami 3">
+          <img class="main-img" src="assets/img/azamikurotani/estatuaazamikurotani1.jpg" alt="Azami 1">
+          <div class="thumbs">
+            <img class="thumb active" src="assets/img/azamikurotani/estatuaazamikurotani1.jpg" alt="Azami 1">
+            <img class="thumb" src="assets/img/azamikurotani/estatua-azamikurotani2.jpg" alt="Azami 2">
+            <img class="thumb" src="assets/img/azamikurotani/estatua-azamikurotani3.jpg" alt="Azami 3">
+          </div>
         </div>
 
         <div class="produto-info">
@@ -96,7 +103,10 @@
       <!-- Produto: Tomie -->
       <article class="produto">
         <div class="produto-gallery">
-          <img class="thumb" src="assets/img/tomie/estatua-tomie1.jpg" alt="Tomie">
+          <img class="main-img" src="assets/img/tomie/estatua-tomie1.jpg" alt="Tomie">
+          <div class="thumbs">
+            <img class="thumb active" src="assets/img/tomie/estatua-tomie1.jpg" alt="Tomie">
+          </div>
         </div>
 
         <div class="produto-info">
@@ -139,5 +149,22 @@
       © 2025 — Máhterialize ART
     </div>
   </footer>
+
+  <!-- SCRIPT GALERIA -->
+  <script>
+    document.querySelectorAll('.produto').forEach(produto => {
+      const mainImg = produto.querySelector('.main-img');
+      const thumbs = produto.querySelectorAll('.thumb');
+
+      thumbs.forEach(thumb => {
+        thumb.addEventListener('click', () => {
+          mainImg.src = thumb.src;
+          thumbs.forEach(t => t.classList.remove('active'));
+          thumb.classList.add('active');
+        });
+      });
+    });
+  </script>
 </body>
 </html>
+

@@ -43,8 +43,10 @@ body { font-family:"Poppins", system-ui, sans-serif; background:var(--offwhite);
 .btn-pay { background:var(--red); color:white; padding:12px 18px; border-radius:14px; text-decoration:none; display:inline-block; font-weight:600; transition:.3s; }
 .btn-pay:hover { filter:brightness(.88); transform:scale(1.02); }
 
-/* IMAGEM PEQUENA */
-.small-img { width:100%; height:200px; object-fit:cover; border-radius:14px; }
+/* GALERIA DE IMAGENS */
+.produto-gallery { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
+.produto-gallery img.thumb { width:calc(33% - 5px); height:150px; object-fit:cover; border-radius:12px; cursor:pointer; transition:.3s; }
+.produto-gallery img.thumb:hover { transform:scale(1.05); }
 
 /* SOBRE & CONTATO */
 .sobre, .contato { background:white; padding:26px; border-radius:16px; margin-top:35px; box-shadow:0 6px 25px rgba(0,0,0,0.06); }
@@ -54,14 +56,15 @@ body { font-family:"Poppins", system-ui, sans-serif; background:var(--offwhite);
 .site-footer { margin-top:50px; padding:22px 0; text-align:center; color:var(--gray); }
 
 /* RESPONSIVO */
-@media (max-width:900px){ .hero-inner{flex-direction:column-reverse; gap:25px;} .hero-text h1{font-size:2.4rem;} }
-@media (max-width:480px){ .logo img{height:55px;} .hero{padding:40px 0;} .small-img{height:150px;} }
+@media (max-width:900px){ .hero-inner{flex-direction:column-reverse; gap:25px;} .hero-text h1{font-size:2.4rem;} .produto-gallery img.thumb{width:calc(50% - 4px); height:140px;} }
+@media (max-width:480px){ .logo img{height:55px;} .hero{padding:40px 0;} .produto-gallery img.thumb{width:100%; height:120px;} }
 
 /* MODAL */
 .modal { display:none; position:fixed; z-index:100; padding-top:60px; left:0; top:0; width:100%; height:100%; overflow:auto; background-color:rgba(0,0,0,0.9); }
 .modal-content { margin:auto; display:block; max-width:90%; max-height:80%; border-radius:14px; }
 .close { position:absolute; top:30px; right:35px; color:white; font-size:40px; font-weight:bold; cursor:pointer; transition:.3s; }
 .close:hover { color:#bbb; }
+
 
 
 

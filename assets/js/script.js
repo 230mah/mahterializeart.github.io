@@ -1,9 +1,16 @@
-// comportamento simples: quando clicar thumb, abre a imagem em nova aba (ou substituir para modal)
-document.addEventListener('click', function(e){
-  const t = e.target;
-  if(t.matches('.thumb')){
-    const full = t.getAttribute('data-full') || t.src;
-    // abre em nova aba (Mercado Pago em outra aba)
-    window.open(full, '_blank');
-  }
-});
+<script>
+  document.querySelectorAll('.produto').forEach(produto => {
+    const mainImg = produto.querySelector('.main-img');
+    const thumbs = produto.querySelectorAll('.thumb');
+
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', () => {
+        mainImg.src = thumb.src;
+
+        // Remove active de todas
+        thumbs.forEach(t => t.classList.remove('active'));
+        thumb.classList.add('active');
+      });
+    });
+  });
+</script>

@@ -1,4 +1,8 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -13,7 +17,7 @@ body {
 }
 
 .site-header {
-  background: white;
+  background: #fff;
   border-bottom: 1px solid #ddd;
 }
 
@@ -23,64 +27,66 @@ body {
   align-items: center;
 }
 
-.logo { height: 60px; }
+.logo {
+  height: 60px;
+}
 
-nav a {
+.nav a {
   margin-left: 20px;
   text-decoration: none;
   color: #555;
-  font-weight: bold;
 }
 
 .hero {
+  background: #fff;
+  padding: 40px 0;
+}
+
+.hero-inner {
   display: flex;
   gap: 30px;
   align-items: center;
-  margin: 40px 0;
-  flex-wrap: wrap;
 }
 
-.hero img {
-  max-width: 300px;
+.hero-img {
+  width: 300px;
   border-radius: 10px;
 }
 
+h2 {
+  margin: 40px 0 20px;
+}
+
 .produto {
-  background: white;
-  margin: 30px 0;
+  background: #fff;
   padding: 20px;
   border-radius: 12px;
+  margin-bottom: 30px;
 }
 
 .galeria {
   display: flex;
   gap: 10px;
-  margin-bottom: 15px;
   overflow-x: auto;
 }
 
-.galeria img {
-  height: 110px;
+.thumb {
+  height: 90px;
   cursor: pointer;
-  border-radius: 8px;
-  object-fit: cover;
+  border-radius: 6px;
 }
 
-.info a {
-  background: #7a1f24;
-  color: white;
-  padding: 10px 16px;
-  text-decoration: none;
-  border-radius: 8px;
+.produto-info {
+  margin-top: 15px;
 }
 
 #modal {
-  display: none;
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,.8);
-  align-items: center;
+  display: none;
   justify-content: center;
+  align-items: center;
 }
 
 #modal img {
@@ -92,16 +98,17 @@ nav a {
   position: absolute;
   top: 20px;
   right: 30px;
-  font-size: 40px;
   color: white;
+  font-size: 30px;
   cursor: pointer;
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  color: #777;
+@media (max-width: 768px) {
+  .hero-inner {
+    flex-direction: column;
+  }
 }
+
 
 
 

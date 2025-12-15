@@ -1,147 +1,17 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+const modal = document.getElementById("modal");
+const modalImg = document.getElementById("modal-img");
+const fechar = document.getElementById("fechar");
 
-body {
-  font-family: Arial, sans-serif;
-  background: #f6f6f6;
-  color: #222;
-}
+document.querySelectorAll(".thumb").forEach(img => {
+  img.onclick = () => {
+    modal.style.display = "flex";
+    modalImg.src = img.src;
+  };
+});
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 20px;
-}
-
-/* HEADER */
-.site-header {
-  background: white;
-  box-shadow: 0 2px 10px rgba(0,0,0,.05);
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.logo {
-  height: 60px;
-}
-
-.nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #555;
-}
-
-/* HERO */
-.hero {
-  padding: 50px 0;
-}
-
-.hero-inner {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.hero-img {
-  max-width: 350px;
-  border-radius: 10px;
-}
-
-/* PRODUTOS */
-.section-title {
-  text-align: center;
-  margin: 40px 0;
-}
-
-.produto {
-  background: white;
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 30px;
-}
-
-.galeria {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-}
-
-.thumb {
-  height: 90px;
-  border-radius: 8px;
-  cursor: pointer;
-  object-fit: cover;
-}
-
-.produto-info {
-  margin-top: 15px;
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 16px;
-  background: #7a1f24;
-  color: white;
-  text-decoration: none;
-  border-radius: 8px;
-}
-
-/* SOBRE & CONTATO */
-.sobre, .contato {
-  background: white;
-  border-radius: 12px;
-  margin-top: 30px;
-}
-
-/* FOOTER */
-.footer {
-  text-align: center;
-  padding: 20px;
-  color: #777;
-}
-
-/* MODAL */
-#modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,.8);
-  justify-content: center;
-  align-items: center;
-}
-
-#modal-img {
-  max-width: 90%;
-  max-height: 90%;
-}
-
-#fechar {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-/* MOBILE */
-@media (max-width: 600px) {
-  .hero-inner {
-    flex-direction: column;
-  }
-}
-
-
-
-
+fechar.onclick = () => modal.style.display = "none";
+modal.onclick = e => {
+  if (e.target === modal) modal.style.display = "none";
+};
 
 

@@ -1,39 +1,66 @@
 :root{
+  --bg:#f6f6f6;
+  --white:#ffffff;
   --red:#7a1f24;
   --gray:#666;
-  --bg:#f7f7f7;
+  --dark:#222;
+  --max:1200px;
 }
 
-*{box-sizing:border-box;margin:0;padding:0}
+/* RESET */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
 body{
-  font-family:Poppins, sans-serif;
+  font-family: "Poppins", system-ui, sans-serif;
   background:var(--bg);
+  color:var(--dark);
+  line-height:1.6;
 }
 
+/* CONTAINER */
 .container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
+  max-width:var(--max);
+  margin:0 auto;
+  padding:24px;
 }
 
+/* HEADER */
 .site-header{
-  background:#fff;
+  background:white;
+  position:sticky;
+  top:0;
+  z-index:10;
   box-shadow:0 2px 10px rgba(0,0,0,.05);
 }
 
 .header-inner{
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
 }
 
-.logo img{height:60px}
+.logo img{
+  height:60px;
+}
 
 .nav a{
   margin-left:20px;
   text-decoration:none;
   color:var(--gray);
+  font-weight:600;
+}
+
+.nav a:hover{
+  color:var(--red);
+}
+
+/* HERO */
+.hero{
+  padding:60px 0;
 }
 
 .hero-inner{
@@ -43,71 +70,145 @@ body{
   flex-wrap:wrap;
 }
 
-.hero-image img{
-  width:100%;
-  max-width:380px;
-  border-radius:12px;
+.hero-text{
+  flex:1;
 }
 
-.section-title{
-  text-align:center;
-  margin:40px 0;
+.hero-text h1{
+  font-size:2.6rem;
   color:var(--red);
 }
 
-.produto{
-  background:#fff;
+.hero-text .lead{
+  margin:14px 0 24px;
+  color:var(--gray);
+}
+
+.cta{
+  background:var(--red);
+  color:white;
+  padding:14px 26px;
+  border-radius:10px;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.hero-image img{
+  width:100%;
+  max-width:420px;
   border-radius:14px;
+  box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+/* TITULO */
+.section-title{
+  text-align:center;
+  margin:40px 0 30px;
+  color:var(--red);
+  font-size:1.8rem;
+}
+
+/* PRODUTOS */
+.produto{
+  background:white;
+  border-radius:16px;
   padding:20px;
   margin-bottom:30px;
+  box-shadow:0 6px 25px rgba(0,0,0,.06);
+  display:grid;
+  grid-template-columns:1fr 1.2fr;
+  gap:24px;
 }
 
+/* GALERIA HORIZONTAL */
 .galeria{
   display:flex;
-  gap:10px;
+  gap:12px;
   overflow-x:auto;
+  padding-bottom:6px;
 }
 
-.galeria img{
-  width:110px;
-  height:110px;
+.galeria::-webkit-scrollbar{
+  height:6px;
+}
+
+.galeria::-webkit-scrollbar-thumb{
+  background:#ccc;
+  border-radius:10px;
+}
+
+/* MINIATURAS — AQUI ESTÁ A CORREÇÃO */
+.thumb{
+  width:120px;
+  height:120px;
   object-fit:cover;
-  border-radius:8px;
+  border-radius:12px;
   cursor:pointer;
   flex-shrink:0;
+  transition:.2s;
 }
 
-.produto-info{
-  margin-top:15px;
+.thumb:hover{
+  transform:scale(1.05);
+}
+
+/* INFO */
+.produto-info h3{
+  margin-bottom:6px;
+}
+
+.desc{
+  color:var(--gray);
+  margin-bottom:8px;
 }
 
 .price{
   font-size:1.3rem;
-  font-weight:bold;
+  font-weight:700;
+  margin-bottom:14px;
 }
 
 .btn-pay{
-  display:inline-block;
-  margin-top:10px;
   background:var(--red);
-  color:#fff;
-  padding:10px 18px;
-  border-radius:8px;
+  color:white;
+  padding:12px 18px;
+  border-radius:10px;
   text-decoration:none;
+  display:inline-block;
 }
 
+/* SOBRE / CONTATO */
+.sobre,.contato{
+  background:white;
+  padding:26px;
+  border-radius:16px;
+  box-shadow:0 6px 25px rgba(0,0,0,.06);
+  margin-top:40px;
+}
+
+/* FOOTER */
+.site-footer{
+  text-align:center;
+  padding:20px;
+  color:var(--gray);
+  margin-top:40px;
+}
+
+/* MODAL */
 #modal{
-  display:none;
   position:fixed;
   inset:0;
   background:rgba(0,0,0,.85);
-  justify-content:center;
+  display:none;
   align-items:center;
+  justify-content:center;
+  z-index:999;
 }
 
 #modal img{
   max-width:90%;
   max-height:90%;
+  border-radius:16px;
 }
 
 #fechar{
@@ -115,14 +216,25 @@ body{
   top:20px;
   right:30px;
   font-size:40px;
-  color:#fff;
+  color:white;
   cursor:pointer;
 }
 
-@media(max-width:600px){
-  .hero-inner{flex-direction:column-reverse}
-}
+/* RESPONSIVO */
+@media(max-width:800px){
+  .produto{
+    grid-template-columns:1fr;
+  }
 
+  .hero-inner{
+    flex-direction:column-reverse;
+  }
+
+  .thumb{
+    width:90px;
+    height:90px;
+  }
+}
 
 
 

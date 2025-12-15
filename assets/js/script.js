@@ -1,15 +1,15 @@
 const modal = document.getElementById("modal");
 const modalImg = document.getElementById("modal-img");
-const close = document.getElementById("close");
+const fechar = document.getElementById("fechar");
 
 document.querySelectorAll(".thumb").forEach(img => {
-  img.addEventListener("click", () => {
+  img.onclick = () => {
     modal.style.display = "flex";
     modalImg.src = img.src;
-  });
+  };
 });
 
-close.onclick = () => modal.style.display = "none";
+fechar.onclick = () => modal.style.display = "none";
 modal.onclick = e => {
   if (e.target === modal) modal.style.display = "none";
 };

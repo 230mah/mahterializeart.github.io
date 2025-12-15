@@ -3,10 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Máhterialize ART</title>
+  <title>Máhterialize ART — Arte Autoral</title>
 
   <!-- Fonte elegante -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
@@ -24,17 +26,12 @@
   </div>
 </header>
 
-<!-- HERO -->
+<!-- HERO COM LOGO -->
 <section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-text">
-      <h1>Máhterialize ART</h1>
-      <p>Arte autoral feita à mão.<br>Materializando ideias, sonhos e emoções.</p>
-      <a href="#produtos" class="cta">Ver Coleção</a>
-    </div>
-    <div class="hero-logo">
-      <img src="assets/img/logo/logo.jpg" alt="Logo Máhterialize ART">
-    </div>
+  <div class="container hero-content">
+    <img class="hero-logo" src="assets/img/logo/logo.jpg" alt="Logo Máhterialize ART">
+    <h1>Arte que materializa ideias, sonhos e emoções</h1>
+    <p>Esculturas e bustos autorais feitos à mão</p>
   </div>
 </section>
 
@@ -42,63 +39,62 @@
 <section id="produtos" class="container">
   <h2 class="section-title">Coleção</h2>
 
-  <!-- PRODUTO -->
-  <article class="produto">
-    <div class="galeria">
-      <img src="assets/img/okarun/estatua-okarun1.jpg" class="thumb">
-      <img src="assets/img/okarun/estatua-okarun2.jpg" class="thumb">
-      <img src="assets/img/okarun/estatua-okarun3.jpg" class="thumb">
-    </div>
-    <div class="produto-info">
+  <div class="produtos-grid">
+
+    <!-- OKARUN -->
+    <article class="produto">
+      <div class="galeria">
+        <img src="assets/img/okarun/estatua-okarun1.jpg">
+        <img src="assets/img/okarun/estatua-okarun2.jpg">
+        <img src="assets/img/okarun/estatua-okarun3.jpg">
+      </div>
       <h3>Okarun — Dandadan</h3>
-      <span>28 × 19 cm</span>
-      <strong>R$ 800,00</strong>
-    </div>
-  </article>
+      <p class="price">R$ 800,00</p>
+      <a class="btn" href="https://mpago.li/2fnZuJa" target="_blank">Comprar</a>
+    </article>
 
-  <article class="produto">
-    <div class="galeria">
-      <img src="assets/img/azamikurotani/estatuaazamikurotani1.jpg" class="thumb">
-      <img src="assets/img/azamikurotani/estatua-azamikurotani2.jpg" class="thumb">
-      <img src="assets/img/azamikurotani/estatua-azamikurotani3.jpg" class="thumb">
-    </div>
-    <div class="produto-info">
-      <h3>Azami Kurotani — Uzumaki</h3>
-      <span>8 × 7 cm</span>
-      <strong>R$ 350,00</strong>
-    </div>
-  </article>
-
-  <article class="produto">
-    <div class="galeria">
-      <img src="assets/img/tomie/estatua-tomie1.jpg" class="thumb">
-    </div>
-    <div class="produto-info">
-      <h3>Tomie — Junji Ito</h3>
-      <span>13 × 6 cm</span>
-      <strong>R$ 350,00</strong>
-    </div>
-  </article>
-
-  <article class="produto">
-    <div class="galeria">
-      <img src="assets/img/sluggirl/estatua-sluggirl1.jpg" class="thumb">
-    </div>
-    <div class="produto-info">
+    <!-- SLUG GIRL -->
+    <article class="produto">
+      <div class="galeria">
+        <img src="assets/img/sluggirl/estatua-sluggirl1.jpg">
+      </div>
       <h3>Slug Girl — Junji Ito</h3>
-      <span>10 × 4 cm</span>
-      <strong>R$ 250,00</strong>
-    </div>
-  </article>
+      <p class="price">R$ 250,00</p>
+      <a class="btn" href="https://mpago.li/2s1LVDK" target="_blank">Comprar</a>
+    </article>
 
+    <!-- AZAMI -->
+    <article class="produto">
+      <div class="galeria">
+        <img src="assets/img/azamikurotani/estatuaazamikurotani1.jpg">
+        <img src="assets/img/azamikurotani/estatua-azamikurotani2.jpg">
+        <img src="assets/img/azamikurotani/estatua-azamikurotani3.jpg">
+      </div>
+      <h3>Azami Kurotani — Uzumaki</h3>
+      <p class="price">R$ 350,00</p>
+      <a class="btn" href="https://mpago.li/2ez8zkw" target="_blank">Comprar</a>
+    </article>
+
+    <!-- TOMIE -->
+    <article class="produto">
+      <div class="galeria">
+        <img src="assets/img/tomie/estatua-tomie1.jpg">
+      </div>
+      <h3>Tomie — Junji Ito</h3>
+      <p class="price">R$ 350,00</p>
+      <a class="btn" href="https://mpago.li/2HDJxTG" target="_blank">Comprar</a>
+    </article>
+
+  </div>
 </section>
 
 <!-- SOBRE -->
 <section id="sobre" class="container sobre">
-  <h2>Quem é a Máhterialize ART</h2>
+  <h2>Quem sou eu</h2>
   <p>
-    Meu nome é <strong>Marília Mariano</strong>, sou artesã e artista há mais de 5 anos.
-    A Máhterialize ART nasceu para materializar ideias, sonhos e emoções através da arte feita à mão.
+    Meu nome é <strong>Marília Mariano</strong>, sou artesã e artista há mais de cinco anos.
+    A Máhterialize ART nasce do desejo de transformar ideias, sonhos e sentimentos em arte física,
+    feita à mão, com identidade e cuidado.
   </p>
 </section>
 
@@ -106,7 +102,7 @@
 <section id="contato" class="container contato">
   <h2>Contato</h2>
   <p>📧 mahterializeart@gmail.com</p>
-  <p>📸 @mahterialize_art</p>
+  <p>📸 <a href="https://instagram.com/mahterialize_art" target="_blank">@mahterialize_art</a></p>
 </section>
 
 <footer>
@@ -115,7 +111,6 @@
 
 <!-- MODAL -->
 <div id="modal">
-  <span id="close">&times;</span>
   <img id="modal-img">
 </div>
 

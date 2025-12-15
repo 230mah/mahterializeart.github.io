@@ -10,5 +10,11 @@ document.querySelectorAll(".thumb").forEach(img=>{
 });
 
 fechar.onclick = ()=> modal.style.display = "none";
-modal.onclick = e => { if(e.target === modal) modal.style.display="none"; }
+
+modal.onclick = e=>{
+  if(e.target === modal){
+    modal.style.display = "none";
+  }
+};
+
 

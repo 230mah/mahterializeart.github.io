@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>MÁhterialize ART — Loja</title>
 
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=20" />
 </head>
 
 <body>
 
 <header class="site-header">
   <div class="container header-inner">
-    <img class="logo" src="assets/img/logo/logo.jpg" alt="Máhterialize ART">
-
+    <div class="logo">
+      <img src="assets/img/logo/logo.jpg" alt="Máhterialize ART">
+    </div>
     <nav class="nav">
       <a href="#produtos">Produtos</a>
       <a href="#sobre">Sobre</a>
@@ -22,55 +23,90 @@
   </div>
 </header>
 
+<main>
+
+<!-- HERO -->
 <section class="hero">
   <div class="container hero-inner">
     <div class="hero-text">
       <h1>MÁhterialize ART</h1>
-      <p>Arte autoral feita à mão.<br>Transformando ideias em matéria.</p>
+      <p class="lead">
+        Arte autoral feita à mão.<br>
+        Estátuas e bustos colecionáveis.
+      </p>
       <a href="#produtos" class="cta">Ver produtos</a>
     </div>
 
-    <img class="hero-img" src="assets/img/okarun/estatua-okarun1.jpg" alt="Produto destaque">
+    <!-- LOGO EM DESTAQUE -->
+    <div class="hero-image">
+      <img src="assets/img/logo/logo.jpg" alt="Logo Máhterialize ART">
+    </div>
   </div>
 </section>
 
-<section id="produtos" class="container">
+<!-- PRODUTOS -->
+<section id="produtos" class="container produtos">
   <h2 class="section-title">Produtos</h2>
 
-  <!-- PRODUTO -->
+  <!-- PRODUTO 1 -->
   <article class="produto">
     <div class="galeria">
       <img src="assets/img/okarun/estatua-okarun1.jpg" class="thumb">
       <img src="assets/img/okarun/estatua-okarun2.jpg" class="thumb">
       <img src="assets/img/okarun/estatua-okarun3.jpg" class="thumb">
     </div>
-
     <div class="produto-info">
       <h3>Estátua Okarun — Dandadan</h3>
-      <p>28 × 19 cm</p>
-      <strong>R$ 800,00</strong>
-      <a class="btn" href="https://mpago.li/2fnZuJa" target="_blank">Comprar</a>
+      <p class="desc">28 × 19 cm</p>
+      <p class="price">R$ 800,00</p>
+      <a class="btn-pay" href="https://mpago.li/2fnZuJa" target="_blank">Comprar</a>
     </div>
   </article>
 
-  <!-- PRODUTO -->
+  <!-- PRODUTO 2 -->
+  <article class="produto">
+    <div class="galeria">
+      <img src="assets/img/sluggirl/estatua-sluggirl1.jpg" class="thumb">
+    </div>
+    <div class="produto-info">
+      <h3>Estátua Slug Girl — Junji Ito</h3>
+      <p class="desc">10 × 4 cm</p>
+      <p class="price">R$ 250,00</p>
+      <a class="btn-pay" href="https://mpago.li/2s1LVDK" target="_blank">Comprar</a>
+    </div>
+  </article>
+
+  <!-- PRODUTO 3 -->
   <article class="produto">
     <div class="galeria">
       <img src="assets/img/azamikurotani/estatuaazamikurotani1.jpg" class="thumb">
       <img src="assets/img/azamikurotani/estatua-azamikurotani2.jpg" class="thumb">
       <img src="assets/img/azamikurotani/estatua-azamikurotani3.jpg" class="thumb">
     </div>
-
     <div class="produto-info">
-      <h3>Busto Azami Kurotani</h3>
-      <p>8 × 7 cm</p>
-      <strong>R$ 350,00</strong>
-      <a class="btn" href="https://mpago.li/2ez8zkw" target="_blank">Comprar</a>
+      <h3>Busto Azami Kurotani — Uzumaki</h3>
+      <p class="desc">8 × 7 cm</p>
+      <p class="price">R$ 350,00</p>
+      <a class="btn-pay" href="https://mpago.li/2ez8zkw" target="_blank">Comprar</a>
+    </div>
+  </article>
+
+  <!-- PRODUTO 4 -->
+  <article class="produto">
+    <div class="galeria">
+      <img src="assets/img/tomie/estatua-tomie1.jpg" class="thumb">
+    </div>
+    <div class="produto-info">
+      <h3>Busto Tomie — Junji Ito</h3>
+      <p class="desc">13 × 6 cm</p>
+      <p class="price">R$ 350,00</p>
+      <a class="btn-pay" href="https://mpago.li/2HDJxTG" target="_blank">Comprar</a>
     </div>
   </article>
 
 </section>
 
+<!-- SOBRE -->
 <section id="sobre" class="container sobre">
   <h2>Quem é a Máhterialize ART</h2>
   <p>
@@ -80,13 +116,16 @@
   </p>
 </section>
 
+<!-- CONTATO -->
 <section id="contato" class="container contato">
   <h2>Contato</h2>
-  <p>📧 mahterializeart@gmail.com</p>
+  <p>📧 <a href="mailto:mahterializeart@gmail.com">mahterializeart@gmail.com</a></p>
   <p>📸 <a href="https://instagram.com/mahterialize_art" target="_blank">@mahterialize_art</a></p>
 </section>
 
-<footer class="footer">
+</main>
+
+<footer class="site-footer">
   © 2025 — Máhterialize ART
 </footer>
 
@@ -96,10 +135,9 @@
   <img id="modal-img">
 </div>
 
-<script src="assets/js/script.js"></script>
+<script src="assets/js/script.js?v=20"></script>
 </body>
 </html>
-
 
 
 

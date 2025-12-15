@@ -1,7 +1,7 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -16,9 +16,10 @@ body {
   padding: 20px;
 }
 
+/* HEADER */
 .site-header {
-  background: #fff;
-  border-bottom: 1px solid #ddd;
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,.05);
 }
 
 .header-inner {
@@ -37,28 +38,31 @@ body {
   color: #555;
 }
 
+/* HERO */
 .hero {
-  background: #fff;
-  padding: 40px 0;
+  padding: 50px 0;
 }
 
 .hero-inner {
   display: flex;
-  gap: 30px;
   align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
 }
 
 .hero-img {
-  width: 300px;
+  max-width: 350px;
   border-radius: 10px;
 }
 
-h2 {
-  margin: 40px 0 20px;
+/* PRODUTOS */
+.section-title {
+  text-align: center;
+  margin: 40px 0;
 }
 
 .produto {
-  background: #fff;
+  background: white;
   padding: 20px;
   border-radius: 12px;
   margin-bottom: 30px;
@@ -72,29 +76,55 @@ h2 {
 
 .thumb {
   height: 90px;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 6px;
+  object-fit: cover;
 }
 
 .produto-info {
   margin-top: 15px;
 }
 
+.btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 16px;
+  background: #7a1f24;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* SOBRE & CONTATO */
+.sobre, .contato {
+  background: white;
+  border-radius: 12px;
+  margin-top: 30px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  color: #777;
+}
+
+/* MODAL */
 #modal {
+  display: none;
   position: fixed;
   inset: 0;
   background: rgba(0,0,0,.8);
-  display: none;
   justify-content: center;
   align-items: center;
 }
 
-#modal img {
+#modal-img {
   max-width: 90%;
   max-height: 90%;
 }
 
-#close {
+#fechar {
   position: absolute;
   top: 20px;
   right: 30px;
@@ -103,13 +133,12 @@ h2 {
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+/* MOBILE */
+@media (max-width: 600px) {
   .hero-inner {
     flex-direction: column;
   }
 }
-
-
 
 
 

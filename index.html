@@ -1,21 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>MÁhterialize ART — Loja</title>
 
-  <link rel="stylesheet" href="assets/css/styles.css?v=10" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=20">
 </head>
 
 <body>
 
 <header class="site-header">
   <div class="container header-inner">
-    <div class="logo">
-      <img src="assets/img/logo/logo.jpg" alt="Máhterialize ART">
-    </div>
-    <nav class="nav">
+    <img class="logo" src="assets/img/logo/logo.jpg" alt="Máhterialize ART">
+    <nav>
       <a href="#produtos">Produtos</a>
       <a href="#sobre">Sobre</a>
       <a href="#contato">Contato</a>
@@ -23,88 +21,80 @@
   </div>
 </header>
 
-<main>
+<main class="container">
 
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="hero-text">
+  <section class="hero">
+    <div>
       <h1>MÁhterialize ART</h1>
-      <p class="lead">
-        Estátuas e bustos colecionáveis.<br>
-        Arte autoral feita à mão.
-      </p>
-      <a href="#produtos" class="cta">Ver produtos</a>
+      <p>Arte autoral feita à mão.<br>Estátuas e bustos colecionáveis.</p>
     </div>
-    <div class="hero-image">
-      <img src="assets/img/okarun/estatua-okarun1.jpg" alt="Destaque">
-    </div>
-  </div>
-</section>
+    <img src="assets/img/okarun/estatua-okarun1.jpg" alt="Destaque">
+  </section>
 
-<section id="produtos" class="container">
-  <h2 class="section-title">Produtos</h2>
+  <h2 id="produtos">Produtos</h2>
 
   <!-- PRODUTO -->
   <article class="produto">
     <div class="galeria">
-      <img src="assets/img/okarun/estatua-okarun1.jpg" class="thumb">
-      <img src="assets/img/okarun/estatua-okarun2.jpg" class="thumb">
-      <img src="assets/img/okarun/estatua-okarun3.jpg" class="thumb">
+      <img src="assets/img/okarun/estatua-okarun1.jpg">
+      <img src="assets/img/okarun/estatua-okarun2.jpg">
+      <img src="assets/img/okarun/estatua-okarun3.jpg">
     </div>
-    <div class="produto-info">
+
+    <div class="info">
       <h3>Estátua Okarun — Dandadan</h3>
-      <p class="desc">28 × 19 cm</p>
-      <p class="price">R$ 800,00</p>
-      <a class="btn-pay" href="https://mpago.li/2fnZuJa" target="_blank">Comprar</a>
+      <p>28 × 19 cm</p>
+      <strong>R$ 800,00</strong><br><br>
+      <a href="https://mpago.li/2fnZuJa" target="_blank">Comprar</a>
     </div>
   </article>
 
   <article class="produto">
     <div class="galeria">
-      <img src="assets/img/azamikurotani/estatuaazamikurotani1.jpg" class="thumb">
-      <img src="assets/img/azamikurotani/estatua-azamikurotani2.jpg" class="thumb">
-      <img src="assets/img/azamikurotani/estatua-azamikurotani3.jpg" class="thumb">
+      <img src="assets/img/azamikurotani/estatuaazamikurotani1.jpg">
+      <img src="assets/img/azamikurotani/estatua-azamikurotani2.jpg">
+      <img src="assets/img/azamikurotani/estatua-azamikurotani3.jpg">
     </div>
-    <div class="produto-info">
+
+    <div class="info">
       <h3>Busto Azami Kurotani</h3>
-      <p class="desc">8 × 7 cm</p>
-      <p class="price">R$ 350,00</p>
-      <a class="btn-pay" href="https://mpago.li/2ez8zkw" target="_blank">Comprar</a>
+      <p>8 × 7 cm</p>
+      <strong>R$ 350,00</strong><br><br>
+      <a href="https://mpago.li/2ez8zkw" target="_blank">Comprar</a>
     </div>
   </article>
 
-</section>
+  <section id="sobre">
+    <h2>Quem sou eu</h2>
+    <p>
+      Meu nome é <strong>Marília Mariano</strong>, sou artesã há mais de 5 anos.
+      A Máhterialize ART nasceu para materializar ideias, sonhos e emoções
+      através da arte feita à mão.
+    </p>
+  </section>
 
-<section id="sobre" class="container sobre">
-  <h2>Quem é a Máhterialize ART</h2>
-  <p>
-    Meu nome é <strong>Marília Mariano</strong>, sou artesã e artista há mais de 5 anos.
-    A Máhterialize ART nasceu do desejo de materializar ideias, sonhos e emoções
-    através da arte feita à mão.
-  </p>
-</section>
-
-<section id="contato" class="container contato">
-  <h2>Contato</h2>
-  <p>📧 <a href="mailto:mahterializeart@gmail.com">mahterializeart@gmail.com</a></p>
-  <p>📸 <a href="https://instagram.com/mahterialize_art" target="_blank">@mahterialize_art</a></p>
-</section>
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>📧 mahterializeart@gmail.com</p>
+    <p>📸 @mahterialize_art</p>
+  </section>
 
 </main>
 
-<footer class="site-footer">
+<footer>
   © 2025 — Máhterialize ART
 </footer>
 
 <!-- MODAL -->
 <div id="modal">
-  <span id="fechar">&times;</span>
+  <span id="close">&times;</span>
   <img id="modal-img">
 </div>
 
-<script src="assets/js/script.js?v=10"></script>
+<script src="assets/js/script.js?v=20"></script>
 </body>
 </html>
+
 
 
 
